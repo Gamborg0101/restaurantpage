@@ -1,4 +1,8 @@
-import { greeting } from "./homepage";
+import { buildHeaderFront, buildSubtitle, buildTextSection } from "./homepage";
 import "./styles.css";
 
-console.log(greeting);
+buildHeaderFront();
+
+buildSubtitle();
+
+buildTextSection();
