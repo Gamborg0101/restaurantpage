@@ -1,34 +1,25 @@
-const container = document.getElementById("content");
-
-function buildHeaderFront() {
-  const title = document.createElement("h1");
-
-  title.id = "headerFront";
-
-  title.innerText = "Welcome to Niels' Kitchen";
-
-  container.appendChild(title);
+function createElements(tag, { id, textContent, className } = {}) {
+  const element = document.createElement(tag);
+  if (id) element.id = id;
+  if (textContent) element.innerText = textContent;
+  if (className) element.class = className;
+  return element;
 }
 
-function buildSubtitle() {
-  const createSubtitle = document.createElement("h3");
+const title = createElements("h1", {
+  id: "headerFront",
+  textContent: "Welcome to Niels' Kitchen",
+});
 
-  createSubtitle.id = "subtitle";
+const subTitle = createElements("h3", {
+  id: "subtitle",
+  textContent: "Home of Juicy Burgers & Grilled Goodness",
+});
 
-  createSubtitle.innerText = "Home of Juicy Burgers & Grilled Goodness";
+const buildTextSection = createElements("p", {
+  id: "textSection",
+  textContent:
+    "At Niels' Kitchen, we serve up mouth-watering meat dishes and classic fast food favorites. From flame-grilled burgers to crispy fries, ribs, wings, and loaded sandwiches — everything is made fresh and packed with flavor. Whether youre craving a quick lunch or a hearty dinner, we've got something sizzling for you. Dine in, take out, or order online — fast, tasty, and satisfying.",
+});
 
-  container.appendChild(createSubtitle);
-}
-
-function buildTextSection() {
-  const createTextSection = document.createElement("p");
-
-  createTextSection.id = "textSection";
-
-  createTextSection.innerText =
-    "At Niels' Kitchen, we serve up mouth-watering meat dishes and classic fast food favorites. From flame-grilled burgers to crispy fries, ribs, wings, and loaded sandwiches — everything is made fresh and packed with flavor. Whether youre craving a quick lunch or a hearty dinner, we've got something sizzling for you. Dine in, take out, or order online — fast, tasty, and satisfying.";
-
-  container.append(createTextSection);
-}
-
-export { buildHeaderFront, buildSubtitle, buildTextSection };
+export { title, subTitle, buildTextSection };

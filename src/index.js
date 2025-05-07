@@ -1,8 +1,8 @@
-import { buildHeaderFront, buildSubtitle, buildTextSection } from "./homepage";
+import { title, subTitle, buildTextSection } from "./homepage";
 import "./styles.css";
 
-buildHeaderFront();
+const container = document.getElementById("content");
 
-buildSubtitle();
-
-buildTextSection();
+container.appendChild(title);
+container.appendChild(subTitle);
+container.appendChild(buildTextSection);
