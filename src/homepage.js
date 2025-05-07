@@ -39,4 +39,6 @@ const burgerPicInElement = createElements("img", {
   altText: "picture of delicious burger",
 });
 
+  
+
 export { title, subTitle, buildTextSection, burgerPicInElement, buildTextDiv };
