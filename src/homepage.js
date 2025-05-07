@@ -1,8 +1,15 @@
-function createElements(tag, { id, textContent, className } = {}) {
+import burgerPic from "./assets/burger.png";
+
+function createElements(
+  tag,
+  { id, textContent, className, source, altText } = {}
+) {
   const element = document.createElement(tag);
   if (id) element.id = id;
   if (textContent) element.innerText = textContent;
-  if (className) element.class = className;
+  if (className) element.className = className;
+  if (source) element.src = source;
+  if (altText) element.alt = altText;
   return element;
 }
 
@@ -22,4 +29,14 @@ const buildTextSection = createElements("p", {
     "At Niels' Kitchen, we serve up mouth-watering meat dishes and classic fast food favorites. From flame-grilled burgers to crispy fries, ribs, wings, and loaded sandwiches — everything is made fresh and packed with flavor. Whether youre craving a quick lunch or a hearty dinner, we've got something sizzling for you. Dine in, take out, or order online — fast, tasty, and satisfying.",
 });
 
-export { title, subTitle, buildTextSection };
+const buildTextDiv = createElements("div", {
+  id: "textSectionContainer",
+});
+
+const burgerPicInElement = createElements("img", {
+  id: "burger",
+  source: burgerPic,
+  altText: "picture of delicious burger",
+});
+
+export { title, subTitle, buildTextSection, burgerPicInElement, buildTextDiv };

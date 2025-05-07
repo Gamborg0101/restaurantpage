@@ -1,8 +1,18 @@
-import { title, subTitle, buildTextSection } from "./homepage";
+import {
+  title,
+  subTitle,
+  buildTextSection,
+  burgerPicInElement,
+  buildTextDiv,
+} from "./homepage";
 import "./styles.css";
 
 const container = document.getElementById("content");
 
+container.appendChild(burgerPicInElement);
 container.appendChild(title);
-container.appendChild(subTitle);
-container.appendChild(buildTextSection);
+
+/* New container */
+container.appendChild(buildTextDiv);
+buildTextDiv.appendChild(subTitle);
+buildTextDiv.appendChild(buildTextSection);
