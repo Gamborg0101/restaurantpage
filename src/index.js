@@ -1,7 +1,6 @@
 import {
   getTitle,
   getSubTitle,
-  getTextDiv,
   getBurgerPic,
   getTextSection,
   openingHours,
@@ -18,23 +17,25 @@ function clearContainer() {
   container.innerHTML = "";
 }
 
+function appendToContainer(...elements) {
+  elements.forEach((element) => {
+    container.appendChild(element);
+  });
+}
+
+appendToContainer();
+
 /* Frontpage */
 function renderHome() {
   container.innerHTML = "";
-
-  const getBurger = getBurgerPic();
-  const title = getTitle();
-  const textDiv = getTextDiv();
-  const subTitle = getSubTitle();
-  const textSection = getTextSection();
-  const hours = openingHours();
-
-  textDiv.appendChild(subTitle);
-  textDiv.appendChild(textSection);
-  container.appendChild(getBurger);
-  container.appendChild(title);
-  container.appendChild(textDiv);
-  container.appendChild(hours);
+  
+  appendToContainer(
+    getBurgerPic(),
+    getTitle(),
+    getSubTitle(),
+    getTextSection(),
+    openingHours()
+  );
 }
 
 window.addEventListener("load", () => {

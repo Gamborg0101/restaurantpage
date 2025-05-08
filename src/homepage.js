@@ -28,17 +28,16 @@ export function getSubTitle() {
 }
 
 export function getTextSection() {
-  return createElements("p", {
+  const textContainer = document.createElement("div");
+  textContainer.id = "textcontainer";
+
+  const textParagraph = createElements("p", {
     id: "textSection",
     textContent:
       "At Niels' Kitchen, we serve up mouth-watering meat dishes and classic fast food favorites. From flame-grilled burgers to crispy fries, ribs, wings, and loaded sandwiches — everything is made fresh and packed with flavor. Whether youre craving a quick lunch or a hearty dinner, we've got something sizzling for you. Dine in, take out, or order online — fast, tasty, and satisfying.",
   });
-}
-
-export function getTextDiv() {
-  return createElements("div", {
-    id: "textSectionContainer",
-  });
+  textContainer.appendChild(textParagraph);
+  return textContainer;
 }
 
 export function getBurgerPic() {
