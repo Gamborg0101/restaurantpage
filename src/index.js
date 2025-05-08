@@ -5,6 +5,7 @@ import {
   getTextSection,
   openingHours,
 } from "./homepage";
+import { menuPageRender } from "./menu";
 
 import "./menu.js";
 import "./styles.css";
@@ -28,14 +29,17 @@ appendToContainer();
 /* Frontpage */
 function renderHome() {
   container.innerHTML = "";
-  
-  appendToContainer(
-    getBurgerPic(),
-    getTitle(),
-    getSubTitle(),
-    getTextSection(),
-    openingHours()
-  );
+
+  appendToContainer(getBurgerPic(), menuPageRender());
+
+  /* RENDER HOME DO NOT REMOVE */
+  // appendToContainer(
+  //   getBurgerPic(),
+  //   getTitle(),
+  //   getSubTitle(),
+  //   getTextSection(),
+  //   openingHours()
+  // );
 }
 
 window.addEventListener("load", () => {
