@@ -43,7 +43,16 @@ export function menuPageRender() {
     if (id) element.id = id;
     if (textContent) element.innerText = textContent;
     if (className) element.className = className;
-    
+    if (price) {
+      const priceElemenet = document.createElement("p");
+      priceElemenet.innerText = price;
+      tag.appendChild(priceElemenet);
+    }
+    if (description) {
+      const descriptionElement = document.createElement("p");
+      descriptionElement.innerText = description;
+      tag.appendChild(descriptionElement);
+    }
     return element;
   }
 
