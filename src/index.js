@@ -10,8 +10,6 @@ import { menuPageRender } from "./menu";
 import "./menu.js";
 import "./styles.css";
 
-/* MANGLER AT ÆNDRE NAVNE PÅ FUNKTIONERNE */
-
 const container = document.getElementById("content");
 
 function clearContainer() {
@@ -29,7 +27,7 @@ appendToContainer();
 /* Frontpage */
 function renderHome() {
   container.innerHTML = "";
-
+  console.log(menuPageRender());
   appendToContainer(getBurgerPic(), menuPageRender());
 
   /* RENDER HOME DO NOT REMOVE */

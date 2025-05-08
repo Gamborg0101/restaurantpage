@@ -64,7 +64,7 @@ export function openingHours() {
   ];
   array.forEach((element) => {
     const eachDay = createElements("p");
-    eachDay.innerText = element;
+    eachDay.innerHTML = element;
     hourContainer.appendChild(eachDay);
   });
   return hourContainer;
