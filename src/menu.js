@@ -58,18 +58,19 @@ export function menuPageRender() {
 
       const foodPrice = document.createElement("p");
       foodPrice.className = "foodPrice";
-      foodPrice.innerText = price;
+      foodPrice.innerText = `$${price}`;
 
       const imgContainer = document.createElement("img");
       imgContainer.src = img;
-      imgContainer.class = "image";
-
-      console.log(imgContainer);
+      imgContainer.className = "image";
+      const imgContainerDiv = document.createElement("div");
+      imgContainerDiv.className = "imageDiv";
+      imgContainerDiv.appendChild(imgContainer);
 
       foodItemsDiv.appendChild(foodName);
       foodItemsDiv.appendChild(foodDescription);
+      foodItemsDiv.appendChild(imgContainerDiv);
       foodItemsDiv.appendChild(foodPrice);
-      foodItemsDiv.appendChild(imgContainer);
 
       foodContainer.appendChild(foodItemsDiv);
     });

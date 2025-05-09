@@ -93,10 +93,51 @@ button:hover {
 }
 
 img {
-  width: 200px;
+  width: 300px;
   height: auto;
+  margin-bottom: 25px;
 }
 
-.foodItems > {
-  background-color: aqua;
+.foodContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.foodItems {
+  background-color: rgba(63, 45, 229, 0.116);
+  border: 2px solid rgba(63, 45, 229, 0.116);
+
+  width: 700px;
+  margin-top: 0.3px;
+}
+
+.foodname,
+.foodDescription,
+.foodPrice,
+.imageDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodName {
+  margin-left: 10px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  font-size: 1.6rem;
+}
+
+.foodDescription {
+  font-size: 1.2rem;
+}
+
+.foodPrice {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }

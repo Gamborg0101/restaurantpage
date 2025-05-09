@@ -26,18 +26,15 @@ appendToContainer();
 
 /* Frontpage */
 function renderHome() {
-  container.innerHTML = "";
-  console.log(menuPageRender());
-  appendToContainer(getBurgerPic(), menuPageRender());
+  clearContainer();
 
-  /* RENDER HOME DO NOT REMOVE */
-  // appendToContainer(
-  //   getBurgerPic(),
-  //   getTitle(),
-  //   getSubTitle(),
-  //   getTextSection(),
-  //   openingHours()
-  // );
+  appendToContainer(
+    getBurgerPic(),
+    getTitle(),
+    getSubTitle(),
+    getTextSection(),
+    openingHours()
+  );
 }
 
 window.addEventListener("load", () => {
@@ -55,9 +52,7 @@ homeButton.addEventListener("click", () => {
 const menuButton = document.getElementById("menuButton");
 menuButton.addEventListener("click", () => {
   clearContainer();
-  const getBurger = getBurgerPic();
-
-  container.appendChild(getBurger);
+  appendToContainer(getBurgerPic(), menuPageRender());
 });
 
 const aboutButton = document.getElementById("aboutButton");
