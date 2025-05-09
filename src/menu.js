@@ -44,6 +44,7 @@ export function menuPageRender() {
   function createFoodElements() {
     const foodContainer = document.createElement("div");
     menuItems.forEach(({ name, description, price, img }) => {
+        
       foodContainer.className = "foodContainer";
       const foodItemsDiv = document.createElement("div");
       foodItemsDiv.classList = "foodItems";
@@ -61,8 +62,9 @@ export function menuPageRender() {
       foodPrice.innerText = `$${price}`;
 
       const imgContainer = document.createElement("img");
-      imgContainer.src = img;
       imgContainer.className = "image";
+      imgContainer.src = img;
+
       const imgContainerDiv = document.createElement("div");
       imgContainerDiv.className = "imageDiv";
       imgContainerDiv.appendChild(imgContainer);

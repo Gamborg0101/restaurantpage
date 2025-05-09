@@ -6,6 +6,7 @@ import {
   openingHours,
 } from "./homepage";
 import { menuPageRender } from "./menu";
+import { aboutPageRender } from "./about.js";
 
 import "./menu.js";
 import "./styles.css";
@@ -28,13 +29,16 @@ appendToContainer();
 function renderHome() {
   clearContainer();
 
-  appendToContainer(
-    getBurgerPic(),
-    getTitle(),
-    getSubTitle(),
-    getTextSection(),
-    openingHours()
-  );
+  appendToContainer(getBurgerPic(), aboutPageRender());
+
+  /* Frontpage renders - DONT DELETE */
+  // appendToContainer(
+  //   getBurgerPic(),
+  //   getTitle(),
+  //   getSubTitle(),
+  //   getTextSection(),
+  //   openingHours()
+  // );
 }
 
 window.addEventListener("load", () => {
@@ -55,9 +59,7 @@ menuButton.addEventListener("click", () => {
   appendToContainer(getBurgerPic(), menuPageRender());
 });
 
-const aboutButton = document.getElementById("aboutButton");
-aboutButton.addEventListener("click", () => {
-  console.log("hi");
-});
-
 /* About */
+
+const aboutButton = document.getElementById("aboutButton");
+aboutButton.addEventListener("click", () => {});
