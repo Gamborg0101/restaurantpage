@@ -29,16 +29,13 @@ appendToContainer();
 function renderHome() {
   clearContainer();
 
-  appendToContainer(getBurgerPic(), aboutPageRender());
-
-  /* Frontpage renders - DONT DELETE */
-  // appendToContainer(
-  //   getBurgerPic(),
-  //   getTitle(),
-  //   getSubTitle(),
-  //   getTextSection(),
-  //   openingHours()
-  // );
+  appendToContainer(
+    getBurgerPic(),
+    getTitle(),
+    getSubTitle(),
+    getTextSection(),
+    openingHours()
+  );
 }
 
 window.addEventListener("load", () => {
@@ -62,4 +59,8 @@ menuButton.addEventListener("click", () => {
 /* About */
 
 const aboutButton = document.getElementById("aboutButton");
-aboutButton.addEventListener("click", () => {});
+aboutButton.addEventListener("click", () => {
+  clearContainer();
+
+  appendToContainer(getBurgerPic(), aboutPageRender());
+});

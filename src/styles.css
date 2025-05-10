@@ -141,3 +141,17 @@ img {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutText {
+  margin-top: 20px;
+  width: 600px;
+  text-indent: 50px;
+  line-height: 1.8;
+}

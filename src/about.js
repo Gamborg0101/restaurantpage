@@ -1,6 +1,7 @@
 export function aboutPageRender() {
   function createText() {
     const textContainer = document.createElement("div");
+    textContainer.className = "textContainer";
 
     const aboutHeader = document.createElement("h3");
     aboutHeader.className = "aboutHeader";
